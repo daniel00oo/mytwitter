@@ -28,3 +28,5 @@ def configure_logging():
     if CONF.log.log_file:
         handler = logging.FileHandler(CONF.log.log_file)
         add_handler(handler)
+
+
