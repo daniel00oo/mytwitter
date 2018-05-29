@@ -6,6 +6,9 @@ from mytwitter.cmd import api
 
 class TestApiCmd(base.BaseTestCase):
 
+    def tearDown(self):
+        print("Hello from tearDown!")
+
     @mock.patch.object(api.parser, 'parse_args')
     @mock.patch.object(api, 'CONF')
     @mock.patch.object(api.log, 'configure_logging')
